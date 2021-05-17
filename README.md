@@ -1,12 +1,12 @@
 <p align="center">
 <h1 align="center">Portico Admin</h1>
 
-  ![GitHub contributors](https://img.shields.io/github/contributors/alexandredfilho/porticoadmin?style=plastic)
-  ![GitHub last commit](https://img.shields.io/github/last-commit/alexandredfilho/porticoadmin?style=plastic)
-  ![GitHub top language](https://img.shields.io/github/languages/top/alexandredfilho/porticoadmin?style=plastic)
-  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alexandredfilho/porticoadmin?style=plastic)
-  ![GitHub issues](https://img.shields.io/github/issues/alexandredfilho/porticoadmin?style=plastic)
-  ![GitHub Repo stars](https://img.shields.io/github/stars/alexandredfilho/porticoadmin?style=plastic)
+  ![GitHub contributors](https://img.shields.io/github/contributors/alexandredfilho/porticoadmin)
+  ![GitHub last commit](https://img.shields.io/github/last-commit/alexandredfilho/porticoadmin)
+  ![GitHub top language](https://img.shields.io/github/languages/top/alexandredfilho/porticoadmin)
+  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alexandredfilho/porticoadmin)
+  ![GitHub issues](https://img.shields.io/github/issues/alexandredfilho/porticoadmin)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/alexandredfilho/porticoadmin)
 
 <br />
 
