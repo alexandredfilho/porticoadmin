@@ -1,25 +1,20 @@
 class DriversController < ApplicationController
   before_action :set_driver, only: %i[ show edit update destroy ]
 
-  # GET /drivers or /drivers.json
   def index
     @drivers = Driver.all
   end
 
-  # GET /drivers/1 or /drivers/1.json
   def show
   end
 
-  # GET /drivers/new
   def new
     @driver = Driver.new
   end
 
-  # GET /drivers/1/edit
   def edit
   end
 
-  # POST /drivers or /drivers.json
   def create
     @driver = Driver.new(driver_params)
 
@@ -34,7 +29,6 @@ class DriversController < ApplicationController
     end
   end
 
-  # PATCH/PUT /drivers/1 or /drivers/1.json
   def update
     respond_to do |format|
       if @driver.update(driver_params)
@@ -47,7 +41,6 @@ class DriversController < ApplicationController
     end
   end
 
-  # DELETE /drivers/1 or /drivers/1.json
   def destroy
     @driver.destroy
     respond_to do |format|
@@ -57,12 +50,11 @@ class DriversController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_driver
       @driver = Driver.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def driver_params
       params.require(:driver).permit(:first_name, :last_name, :document, :shipping_company)
     end
