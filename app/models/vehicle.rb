@@ -1,5 +1,5 @@
 class Vehicle < ApplicationRecord
-  enum type: {
+  enum vehicle_type: {
     Truck: 0,
     Van: 1,
     Car: 2,

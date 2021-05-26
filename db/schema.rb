@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_05_26_025647) do
     t.string "license_plate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "type"
+    t.integer "vehicle_type"
   end
 
 end
