@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :type %>
-    <%= form.collection_select :type, Vehicle.types.map{ |type| [type.first, type.first] }, :first, :second %>
+    <%= form.collection_select :vehicle_type, Vehicle.vehicle_types.map{ |type| [type.first, type.first] }, :first, :second %>
   </div>
 
     <div class="field">
