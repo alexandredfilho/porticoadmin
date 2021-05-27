@@ -1,4 +1,7 @@
 class Vehicle < ApplicationRecord
+  has_many :shipments
+  has_many :drivers, through: :shipments
+
   enum vehicle_type: {
     Truck: 0,
     Van: 1,

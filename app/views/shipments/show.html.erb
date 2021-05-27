@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @shipment.driver_id %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @shipment.vehicle_id %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @shipment.customer_id %>
+</p>
+
+<p>
+  <strong>Shipment type:</strong>
+  <%= @shipment.shipment_type %>
+</p>
+
+<p>
+  <strong>Invoice number:</strong>
+  <%= @shipment.invoice_number %>
+</p>
+
+<p>
+  <strong>Cargo checker:</strong>
+  <%= @shipment.cargo_checker %>
+</p>
+
+<p>
+  <strong>Warehouse:</strong>
+  <%= @shipment.warehouse %>
+</p>
+
+<p>
+  <strong>Dock:</strong>
+  <%= @shipment.dock %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @shipment.date %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @shipment.hour %>
+</p>
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shipments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Driver</th>
+      <th>Vehicle</th>
+      <th>Customer</th>
+      <th>Shipment type</th>
+      <th>Invoice number</th>
+      <th>Cargo checker</th>
+      <th>Warehouse</th>
+      <th>Dock</th>
+      <th>Date</th>
+      <th>Hour</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shipments.each do |shipment| %>
+      <tr>
+        <td><%= shipment.driver_id %></td>
+        <td><%= shipment.vehicle_id %></td>
+        <td><%= shipment.customer_id %></td>
+        <td><%= shipment.shipment_type %></td>
+        <td><%= shipment.invoice_number %></td>
+        <td><%= shipment.cargo_checker %></td>
+        <td><%= shipment.warehouse %></td>
+        <td><%= shipment.dock %></td>
+        <td><%= shipment.date %></td>
+        <td><%= shipment.hour %></td>
+        <td><%= link_to 'Show', shipment %></td>
+        <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
+        <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shipment', new_shipment_path %>
