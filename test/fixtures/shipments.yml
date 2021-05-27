@@ -1,0 +1,23 @@
+one:
+  driver: one
+  vehicle: one
+  customer: one
+  shipment_type: 1
+  invoice_number: MyString
+  cargo_checker: MyString
+  warehouse: 1
+  dock: MyString
+  date: 2021-05-26
+  hour: 2021-05-26 21:29:12
+
+two:
+  driver: two
+  vehicle: two
+  customer: two
+  shipment_type: 1
+  invoice_number: MyString
+  cargo_checker: MyString
+  warehouse: 1
+  dock: MyString
+  date: 2021-05-26
+  hour: 2021-05-26 21:29:12
