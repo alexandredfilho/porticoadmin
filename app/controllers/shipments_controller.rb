@@ -2,7 +2,8 @@ class ShipmentsController < ApplicationController
   before_action :set_shipment, only: %i[ show edit update destroy ]
 
   def index
-    @shipments = Shipment.all
+    @shipments = Shipment.all.includes(:driver, :vehicle, :customer).order(:date)
+
   end
 
   def show

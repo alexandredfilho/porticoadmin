@@ -22,9 +22,9 @@
   <tbody>
     <% @shipments.each do |shipment| %>
       <tr>
-        <td><%= shipment.driver_id %></td>
-        <td><%= shipment.vehicle_id %></td>
-        <td><%= shipment.customer_id %></td>
+        <td><%= shipment.driver.first_name %></td>
+        <td><%= shipment.vehicle.license_plate %></td>
+        <td><%= shipment.customer.description%></td>
         <td><%= shipment.shipment_type %></td>
         <td><%= shipment.invoice_number %></td>
         <td><%= shipment.cargo_checker %></td>
