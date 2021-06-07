@@ -1,5 +1,6 @@
 class ShipmentsController < ApplicationController
   before_action :set_shipment, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   def index
     @shipments = Shipment.all.includes(:driver, :vehicle, :customer).order(:date)
@@ -18,6 +19,7 @@ class ShipmentsController < ApplicationController
 
   def create
     @shipment = Shipment.new(shipment_params)
+    @shipment.user = current_user
 
     respond_to do |format|
       if @shipment.save
@@ -57,6 +59,6 @@ class ShipmentsController < ApplicationController
     end
 
     def shipment_params
-      params.require(:shipment).permit(:driver_id, :vehicle_id, :customer_id, :shipment_type, :invoice_number, :cargo_checker, :warehouse, :dock, :date, :hour)
+      params.require(:shipment).permit(:driver_id, :vehicle_id, :customer_id, :shipment_type, :invoice_number, :cargo_checker, :warehouse, :dock, :date, :hour, :user_id)
     end
 end

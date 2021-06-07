@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Driver:</strong>
   <%= @shipment.driver.first_name %>
@@ -48,6 +46,11 @@
 <p>
   <strong>Hour:</strong>
   <%= @shipment.hour %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @shipment.user.username %>
 </p>
 
 <%= link_to 'Edit', edit_shipment_path(@shipment) %> |

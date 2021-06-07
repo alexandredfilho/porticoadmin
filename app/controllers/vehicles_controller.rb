@@ -1,5 +1,6 @@
 class VehiclesController < ApplicationController
   before_action :set_vehicle, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   def index
     @vehicles = Vehicle.all
@@ -17,6 +18,7 @@ class VehiclesController < ApplicationController
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
+    @vehicle.user = current_user
 
     respond_to do |format|
       if @vehicle.save
@@ -56,6 +58,6 @@ class VehiclesController < ApplicationController
     end
 
     def vehicle_params
-      params.require(:vehicle).permit(:vehicle_type, :manufacturer, :model, :license_plate)
+      params.require(:vehicle).permit(:vehicle_type, :manufacturer, :model, :license_plate, :user_id)
     end
 end

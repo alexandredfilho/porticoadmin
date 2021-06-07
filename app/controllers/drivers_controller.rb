@@ -1,5 +1,6 @@
 class DriversController < ApplicationController
   before_action :set_driver, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   def index
     @drivers = Driver.all
@@ -17,6 +18,7 @@ class DriversController < ApplicationController
 
   def create
     @driver = Driver.new(driver_params)
+    @driver.user = current_user
 
     respond_to do |format|
       if @driver.save
@@ -56,6 +58,6 @@ class DriversController < ApplicationController
     end
 
     def driver_params
-      params.require(:driver).permit(:first_name, :last_name, :document, :shipping_company)
+      params.require(:driver).permit(:first_name, :last_name, :document, :shipping_company, :user_id)
     end
 end
