@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   def index
     @customers = Customer.all
@@ -17,6 +18,7 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
+    @customer.user = current_user
 
     respond_to do |format|
       if @customer.save
@@ -56,6 +58,6 @@ class CustomersController < ApplicationController
     end
 
     def customer_params
-      params.require(:customer).permit(:description)
+      params.require(:customer).permit(:description, :user_id)
     end
 end
