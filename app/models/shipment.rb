@@ -2,6 +2,7 @@ class Shipment < ApplicationRecord
   belongs_to :driver
   belongs_to :vehicle
   belongs_to :customer
+  belongs_to :user
 
   enum shipment_type: {
     Delivery: 0,
