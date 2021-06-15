@@ -1,6 +1,5 @@
 class VehiclesController < ApplicationController
   before_action :set_vehicle, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
 
   def index
     @vehicles = Vehicle.all

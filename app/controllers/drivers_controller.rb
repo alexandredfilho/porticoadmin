@@ -1,6 +1,5 @@
 class DriversController < ApplicationController
   before_action :set_driver, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
 
   def index
     @drivers = Driver.all
