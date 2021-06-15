@@ -1,6 +1,5 @@
 class ShipmentsController < ApplicationController
   before_action :set_shipment, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
 
   def index
     @shipments = Shipment.all.includes(:driver, :vehicle, :customer).order(:date)
