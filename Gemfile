@@ -15,7 +15,7 @@ gem 'devise'
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'rails_db', '2.3.1'
 end
 
